@@ -23,7 +23,7 @@ export default {
       );
     }
 
-    if (url.pathname === "/api/chat" && request.method === "POST") {
+    if (url.pathname === "/api/reindex") {
       return handleChat(request, env);
     }
 
