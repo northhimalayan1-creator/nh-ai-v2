@@ -27,9 +27,16 @@ export default {
       return handleChat(request, env);
     }
 
-    if (url.pathname === "/api/reindex" && request.method === "POST") {
-      return reindex(env);
-    }
+    if (url.pathname === "/api/reindex") {
+  try {
+    return await reindex(env);
+  } catch (e) {
+    return Response.json({
+      error: e.message,
+      stack: String(e)
+    }, { status: 500 });
+  }
+}
 
     return new Response("Not Found", {
       status: 404
