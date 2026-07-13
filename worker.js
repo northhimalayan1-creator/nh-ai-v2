@@ -24,8 +24,8 @@ export default {
     }
 
     if (url.pathname === "/api/reindex") {
-      return handleChat(request, env);
-    }
+  return reindex(env);
+}
 
     if (url.pathname === "/api/reindex") {
   try {
