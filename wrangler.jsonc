@@ -1,0 +1,26 @@
+{
+  "name": "nh-ai-v2",
+  "main": "worker.js",
+  "compatibility_date": "2026-07-13",
+
+  "kv_namespaces": [
+    {
+      "binding": "KB",
+      "id": "499e610ba7284cc0937e50d642a88eeb"
+    }
+  ],
+
+  "ai": {
+    "binding": "AI"
+  },
+
+  "vars": {
+    "SITE_URL": "https://northhimalayan.com"
+  },
+
+  "triggers": {
+    "crons": [
+      "0 3 * * *"
+    ]
+  }
+}
